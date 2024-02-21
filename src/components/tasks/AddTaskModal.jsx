@@ -30,11 +30,11 @@ const AddTaskModal = ({ isOpen, setIsOpen }) => {
                 </div>
                 <div className="flex flex-col gap-2">
                     <label className="text-lg" htmlFor="deadline">Deadline</label>
-                    <input className="rounded-xl" type="date" id="deadline" {...register("deadline")} />
+                    <input className="rounded-xl" type="date" id="deadline" {...register("date")} />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label className="text-lg" htmlFor="assigned-to">Assigned to</label>
-                    <select className="rounded-xl" {...register("assigned-to")} id="assigned-to">
+                    <label className="text-lg" htmlFor="assignedTo">Assigned to</label>
+                    <select className="rounded-xl" {...register("assignedTo")} id="assignedTo">
                         <option hidden >Select</option>
                         <option value="Rahat Hossen">Rahat Hossen</option>
                         <option value="Imteaj Alam">Imteaj Alam</option>
@@ -46,9 +46,9 @@ const AddTaskModal = ({ isOpen, setIsOpen }) => {
                     <label className="text-lg" htmlFor="priority">Priority</label>
                     <select className="rounded-xl" {...register("priority")} id="priority">
                         <option hidden >Select</option>
-                        <option value="Low">Low</option>
-                        <option value="Medium">Medium</option>
-                        <option value="High">High</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
                     </select>
                 </div>
                 <div className="flex gap-3 justify-end">
