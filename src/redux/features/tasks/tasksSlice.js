@@ -1,23 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    tasks: [{
-        id: 1,
-        status: 'pending',
-        title: 'Sleep',
-        description: 'We need a remove button in our task card. Meke the button red and use Heroicon for tashbin icon.',
-        date: '2023-08-28',
-        assignedTo: 'Mir Hussain',
-        priority: 'high'
-    }, {
-        id: 2,
-        status: 'pending',
-        title: 'Sleep',
-        description: 'We need a remove button in our task card. Meke the button red and use Heroicon for tashbin icon.',
-        date: '2023-08-28',
-        assignedTo: 'Rahat Hossen',
-        priority: 'high'
-    }],
+    tasks: [],
     userSpecificTasks: []
 };
 
