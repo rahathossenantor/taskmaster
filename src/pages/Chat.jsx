@@ -1,12 +1,13 @@
 import { useForm } from "react-hook-form";
-import { useGetPostsQuery } from "../redux/features/api/baseApi";
+import { useGetPostsQuery, useSetPostMutation } from "../redux/features/api/baseApi";
 
 const Chat = () => {
-  const { data: posts = [] } = useGetPostsQuery();
   const { register, handleSubmit, reset } = useForm();
+  const { data: posts = [] } = useGetPostsQuery();
+  const [setPost, { data: res }] = useSetPostMutation();
 
   const onSubmit = (data) => {
-    console.log(data);
+    setPost({ title: "Posting new data", body: data.post, userId: 7451 });
     reset();
   };
 
