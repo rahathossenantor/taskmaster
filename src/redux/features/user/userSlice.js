@@ -1,12 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  name: 'Mir Hussain',
-  email: 'mir@gmail.com',
+  name: "Mir Hussain",
+  email: "mir@gmail.com",
+  isLoading: true,
+  isError: false,
+  error: ""
 };
 
+export const createUser = createAsyncThunk("userSlice/createUser", async () => {});
+
 const userSlice = createSlice({
-  name: 'userSlice',
+  name: "userSlice",
   initialState,
   reducers: {},
 });
